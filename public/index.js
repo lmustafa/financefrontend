@@ -19,20 +19,20 @@ $(document).ready(function() {
 			let rate    = "Rate";
 							$.ajax({
 									type: 'POST',
-									contentType:"application/x-www-form-urlencoded;charset=utf-8",
-									// dataType: 'json',
+									contentType: "application/x-www-form-urlencoded;charset=utf-8",									dataType: 'json',
 									url: 'http://0.0.0.0:5000/',
-									data: {
-													Funding:funding,
-													Rate:rate
-												},
-							// 		data: JSON.stringify({
-							// 	'Funding': 'bar',
-							// 	'Rate': 'no$libri'
-							// }),
-									success: function (data) {
-
-									console.log("GOT THIS FROM POSTMAN --->" + data);
+									// data: {
+									// 				Funding:funding,
+									// 				Rate:rate
+									// 			},
+										data: JSON.stringify({
+									'Funding': 'bar',
+									'Rate': '3',
+								}),
+							success: function (data) {
+									var dat = JSON.stringify(data);
+									var dat2= JSON.parse(dat);
+									console.log("GOT THIS FROM YiFei's Awesome API --->" + data.sent);
 							},
 							fail: function(error) {
 									// Non-200 return, do something with error
