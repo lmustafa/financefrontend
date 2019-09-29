@@ -7,6 +7,9 @@ $(document).ready(function() {
 			let area = $('#area').val();
 			let location = $('#location').val();
 			let amount = $('#amount').val();
+			let parent = $('#parent').val();
+			let last = $('#last').val();
+			let study = $('#study').val();
 
 			if(university != '' && area != '' && location != '' && amount != '') {
 				console.log("IT'S NOT EMPTY");
@@ -26,13 +29,19 @@ $(document).ready(function() {
 									// 				Rate:rate
 									// 			},
 										data: JSON.stringify({
-									'Funding': 'bar',
-									'Rate': '3',
+											'University':university,
+											'Parents':parent,
+											'Income':last,
+											'Degree':study,
+											'Tuition': tuition,
+											'Housing': area,
+											'Transport': location,
+											'Lifestyle':amount,
 								}),
 							success: function (data) {
 									var dat = JSON.stringify(data);
 									var dat2= JSON.parse(dat);
-									console.log("GOT THIS FROM YiFei's Awesome API --->" + data.sent);
+									console.log("GOT THIS FROM YiFei's Awesome API --->" + data.Rate + data.Funding);
 							},
 							fail: function(error) {
 									// Non-200 return, do something with error
