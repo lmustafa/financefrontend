@@ -4,20 +4,22 @@ $(document).ready(function() {
 
 		$('#sendData').on('click', function() {
 			let university = $('#university').val();
-			let area = $('#area').val();
+			let transportation = $('#transportation').val();
 			let location = $('#location').val();
 			let amount = $('#amount').val();
 			let parent = $('#parent').val();
 			let last = $('#last').val();
-			let study = $('#study').val();
+			let area = $('#study').val();
+			let tuition=$('#tuition').val();
 
-			if(university != '' && area != '' && location != '' && amount != '') {
+			console.log(university, transportation,location,amount, parent, last, area);
+			if(transportation != '' && university != '' && location != '' && amount != '' && parent != '' && last != '' && area != '' && tuition != '') {
 				console.log("IT'S NOT EMPTY");
 			}
 			else{
+				$('#makeSure').append("Fill in all areas");
 				console.log("oh no, it's empty");
 			}
-
 			let funding = "Funding";
 			let rate    = "Rate";
 							$.ajax({
@@ -32,16 +34,17 @@ $(document).ready(function() {
 											'University':university,
 											'Parents':parent,
 											'Income':last,
-											'Degree':study,
+											'Degree':area,
 											'Tuition': tuition,
-											'Housing': area,
-											'Transport': location,
+											'Housing': location,
+											'Transport': transportation,
 											'Lifestyle':amount,
 								}),
 							success: function (data) {
-									var dat = JSON.stringify(data);
-									var dat2= JSON.parse(dat);
-									console.log("GOT THIS FROM YiFei's Awesome API --->" + data.Rate + data.Funding);
+									
+									console.log("GOT THIS FROM YiFei's Awesome API --->" + data.Rate + " "+data.Funding);
+									$('#showRate').append(data.Rate);
+									$('#showFunding').append(data.Funding);
 							},
 							fail: function(error) {
 									// Non-200 return, do something with error
