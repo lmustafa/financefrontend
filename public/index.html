@@ -35,24 +35,25 @@
 	<section class="showcase">
 		<div class="container-fluid p-0">
 			<div class="row no-gutters">
-				<div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image:url(&quot;assets/img/woman-2.jpg&quot;);"><span></span></div>
+				<div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image:url(&quot;assets/img/women-1.jpg&quot;);"><span></span></div>
 				<div class="col-lg-6 my-auto order-lg-1 showcase-text">
-					<h2>What It is</h2>
-					<p class="lead mb-0">When you use a theme created with Bootstrap, you know that the theme will look great on any device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
+					<h2>What Is It?</h2>
+					<p class="lead mb-0">  Loans begin to accumulate interest immediately upon graduation. So we’ve created a new financial opportunity that allows prospective students to afford a post-secondary education - and graduate debt free! Don’t worry about money while in school and don’t let debt stop you from realizing your dreams!						</p>
 				</div>
 			</div>
 			<div class="row no-gutters">
 				<div class="col-lg-6 text-white showcase-img" style="background-image:url(&quot;assets/img/money.jpg&quot;);"><span></span></div>
 				<div class="col-lg-6 my-auto order-lg-1 showcase-text">
-					<h2>Who it is for</h2>
-					<p class="lead mb-0">Newly improved, and full of great utility classes, Bootstrap 4 is leading the way in mobile responsive web development! All of the themes are now using Bootstrap 4!</p>
+					<h2>Who Is It For?</h2>
+					<p class="lead mb-0">Currently the program is for secondary students who will pursue full-time post-secondary education at a university in Ontario. Know your future school and program but unsure how to finance it? Don’t spend the summer worrying, RBC has got you covered.						</p>
 				</div>
 			</div>
 			<div class="row no-gutters">
 				<div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image:url(&quot;assets/img/graduation.jpg&quot;);"><span></span></div>
 				<div class="col-lg-6 my-auto order-lg-1 showcase-text">
-					<h2>How it works</h2>
-					<p class="lead mb-0">Landing Page is just HTML and CSS with a splash of SCSS for users who demand some deeper customization options. Out of the box, just add your content and images, and your new landing page will be ready to go!
+					<h2>How Does It Work?</h2>
+					<p class="lead mb-0">The bank will give you annual funding for the duration of your post-secondary education. 
+							Fill in your required information below and determine your customized ISA rate. This is the rate of your annual income which will be returned for 7 years once you start work.							
 					</p>
 				</div>
 			</div>
@@ -122,7 +123,7 @@
 							</div>
 						</div>
 						<div class="form-group row">
-							<label for="inputPassword" class="col-sm-2 col-form-label">Parental Contribution</label>
+							<label for="inputPassword" class="col-sm-2 col-form-label">Parental Contribution (Annual)</label>
 							<div class="col-sm-10">
 								<input type="text" class="form-control" id="parent" placeholder="Amount in Dollars">
 							</div>
@@ -131,6 +132,18 @@
 							<label for="inputPassword" class="col-sm-2 col-form-label">Last Year's Income</label>
 							<div class="col-sm-10">
 								<input type="text" class="form-control" id="last" placeholder="Amount in Dollars">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="inputPassword" class="col-sm-2 col-form-label">Scholarship & Grants (2019)</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="ship" placeholder="Amount in Dollars">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="inputPassword" class="col-sm-2 col-form-label">Groceries (Monthly)</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="food" placeholder="Amount in Dollars">
 							</div>
 						</div>
 						<!-- <div class="form-group row">
@@ -184,13 +197,13 @@
 					<div font-size:36px style="width:350px; float:left; text-align: center;">
 						<!-- <p class="w3-text-orange">PARAGRAPH</p> -->
 						<!-- <img src="assets/img/q-mark.jpg" alt="Italian Trulli"> -->
-						<p class = "fix">Rate (%)</p>
+						<p class = "fix">ISA Rate (%)</p>
 						<p class="what" id="showRate"></p>
 						<!-- <p style="text-align: center;">WHAT</p> -->
 						<!-- <button>what</button> -->
 					</div>
 					<div style="width:300px; float:right; text-align: center;">
-						<p class = "fix">Funding</p>
+						<p class = "fix">Annual Funding</p>
 						<p class="what" id="showFunding"></p>
 						<!-- <img src="assets/img/q-mark.jpg" alt="Italian Trulli"> -->
 						<!-- <p>PARAGRAPH</p> -->
@@ -205,7 +218,7 @@
 			</div>
 		</section>
 	</section>
-	<section class="call-to-action text-white text-center" style="background:url(&quot;assets/img/bg-masthead.jpg&quot;) no-repeat center center;background-size:cover;"></section>
+	<section class="call-to-action text-white text-center" style="background:url(&quot;assets/img/bluefooter.png&quot;) no-repeat center center;background-size:cover;"></section>
 	<footer class="footer bg-light">
 		<div class="container">
 			<div class="row">
@@ -222,11 +235,12 @@
 					<p class="text-muted small mb-4 mb-lg-0">© Brand 2018. All Rights Reserved.</p>
 				</div>
 				<div class="col-lg-6 my-auto h-100 text-center text-lg-right">
-					<ul class="list-inline mb-0">
+					<a href="https://www.rbcfinancialplanning.com/" type="button" class="btn btn-primary btn-lg" target="_blank">Connect with a Financial Advisor</a>
+					<!-- <ul class="list-inline mb-0">
 						<li class="list-inline-item"><a href="#"><i class="fa fa-facebook fa-2x fa-fw"></i></a></li>
 						<li class="list-inline-item"><a href="#"><i class="fa fa-twitter fa-2x fa-fw"></i></a></li>
 						<li class="list-inline-item"><a href="#"><i class="fa fa-instagram fa-2x fa-fw"></i></a></li>
-					</ul>
+					</ul> -->
 				</div>
 			</div>
 		</div>

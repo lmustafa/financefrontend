@@ -11,13 +11,24 @@ $(document).ready(function() {
 			let last = $('#last').val();
 			let area = $('#study').val();
 			let tuition=$('#tuition').val();
+			let ship = $('#ship').val();
+			let food = $('#food').val();
+
+			location=location*8;
+			transportation=transportation*8;
+			amount=amount*8;
+			food=food*8;
+			$('#showRate').empty();
+			$('#showFunding').empty();
+			//$('#makeSure').empty();
+
 
 			console.log(university, transportation,location,amount, parent, last, area);
-			if(transportation != '' && university != '' && location != '' && amount != '' && parent != '' && last != '' && area != '' && tuition != '') {
+			if(food != '' && ship != '' && transportation != '' && university != '' && location != '' && amount != '' && parent != '' && last != '' && area != '' && tuition != '') {
 				console.log("IT'S NOT EMPTY");
 			}
 			else{
-				$('#makeSure').append("Fill in all areas");
+				//$('#makeSure').append("Fill in all areas");
 				console.log("oh no, it's empty");
 			}
 			let funding = "Funding";
@@ -39,11 +50,13 @@ $(document).ready(function() {
 											'Housing': location,
 											'Transport': transportation,
 											'Lifestyle':amount,
+											'Food': food,
+											'Scholarship': ship
 								}),
 							success: function (data) {
 									
 									console.log("GOT THIS FROM YiFei's Awesome API --->" + data.Rate + " "+data.Funding);
-									$('#showRate').append(data.Rate);
+									$('#showRate').append(Math.round(data.Rate*100*100)/100);
 									$('#showFunding').append(data.Funding);
 							},
 							fail: function(error) {
